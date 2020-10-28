@@ -1,8 +1,11 @@
 centos7.8 3.10.0-1127
 
 0、yum install epel-release -y
+
 yum install gcc gcc-c++ bison flex -y
+
 yum install kernel-devel-`uname -r`
+
 yum install pciutils
 
 
@@ -69,10 +72,12 @@ yum install docker-compose
 
 
 systemctl stop firewalld
+
 systemctl disable firewalld
 
 7、
 docker save horovod_including_data > horovod_including_data.tar
+
 docker load < horovod_including_data.tar
 
 参考   https://github.com/horovod/horovod/blob/master/docs/docker.rst
